@@ -1,3 +1,53 @@
+
+// part one
+let food = ['Burger', 'Pizza', 'Donuts', 'Pizza', 'Koshary', 'Donuts', 'Seafood', 'Burger']
+
+let x = new Set(food);
+x.add('pasta');
+console.log(x);
+x.delete('Burger')
+console.log(x);
+
+function ClearSet(set){
+    if (set.size >2){
+        set.clear();
+        console.log('There is more than 2 items');
+    }
+    else{
+        console.log('There is only 2 or less items');
+    }
+}
+ClearSet(x)
+console.log(x);
+//------------------------------------------------
+
+// part two
+
+class Vehicle{
+ constructor(wheels, speed){
+    this.wheels = wheels;
+    this.speed = speed
+ }
+}
+
+class Bike extends Vehicle{
+    constructor(wheels =2, speed = 'Fast Enough'){
+    super(wheels, speed)
+ }
+    static callCount = 0;
+    static countCalls(){
+        Bike.callCount++;
+        console.log(`this method is called ${Bike.callCount} times`);
+    }
+}
+let bike01 = new Bike();
+let bike02 = new Bike(5, 'very fast');
+let bike03 = new Bike(1, 'slow');
+Bike.countCalls();
+Bike.countCalls();
+Bike.countCalls();
+
+//-----------------------------------------
 let option = document.querySelectorAll('#options .nav-link');
 let mydata = []
 
