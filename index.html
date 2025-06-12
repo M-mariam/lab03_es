@@ -9,32 +9,34 @@
     <title>Document</title>
 </head>
 <body class="bg-dark">
-<nav class="navbar navbar-expand-lg shadow-lg bg-gradient nav-underline navbar-dark fixed-top " id="#navId">
+<nav class="navbar navbar-expand-lg bg-black shadow-lg bg-gradient nav-underline navbar-dark fixed-top " id="#navId">
         <div class="container">
-            <h1><a class="navbar-brand fs-3" href="#">FOOD</a></h1>
+            <h1><a class="navbar-brand fs-3" href="#">Food Recipes</a></h1>
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav fs-4 fw-light ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link  active" aria-current="page" href="#home">All</a>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+            <ul class="navbar-nav fs-4 fw-light ms-auto mb-2 mb-lg-0" id="options">
+       
+                  <li class="nav-item">
+                <a class="nav-link  active" aria-current="page" href="#beef" data-value="beef">Beef</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">Pizza</a>
+                <a class="nav-link" href="#pizza" data-value="pizza">Pizza</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">Pasta</a>
+                <a class="nav-link" href="#pasta" data-value="pasta">Pasta</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#work">Salad</a>
+                <a class="nav-link" href="#salad" data-value="salad">Salad</a>
               </li>
             </ul>
           </div>
         </div>
 </nav>
-    
+       
     <div class="container py-5 mt-5">
+
         <div class="row gy-3" id="items">
             <!-- <div class="col-md-4">
                 <img src="" class = "w-100" alt="">
@@ -43,7 +45,10 @@
             </div> -->
         </div>
     </div>
-
+     <!-- loader -->
+<div id="loader-overlay">
+  <div class="loader justify-content-center"></div>
+</div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 </body>
